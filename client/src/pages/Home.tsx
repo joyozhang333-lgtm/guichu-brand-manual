@@ -1152,6 +1152,10 @@ function Footer() {
    ============================================================ */
 
 export default function Home() {
+  useEffect(() => {
+    document.title = "归处 Here — AI心灵陪伴与智慧对话平台 | 品牌手册";
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#FAFAF8] overflow-x-hidden">
       <Navigation />
