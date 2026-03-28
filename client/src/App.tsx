@@ -1,4 +1,5 @@
 import { Toaster } from "@/components/ui/sonner";
+import { LanguageProvider } from "@/contexts/LanguageContext";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
@@ -26,6 +27,7 @@ function Router() {
 function App() {
   return (
     <ErrorBoundary>
+      <LanguageProvider>
       <ThemeProvider
         defaultTheme="dark"
         // switchable
@@ -35,6 +37,7 @@ function App() {
           <Router />
         </TooltipProvider>
       </ThemeProvider>
+      </LanguageProvider>
     </ErrorBoundary>
   );
 }
